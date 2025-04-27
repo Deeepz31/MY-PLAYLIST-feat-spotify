@@ -21,14 +21,6 @@ CSS3 for styling
 
 JavaScript for functionality
 
-📂 How to Use
-Clone this repository:
-
-bash
-Copy
-Edit
-git clone https://github.com/your-username/spotify-clone.git
-Open the project folder.
 
 Run index.html in your browser.
 
