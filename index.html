@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+    <link rel="shortcut icon" href="spoti log.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <nav> 
+        <ul>
+            <li class="brand"><img src="logo.png" alt="Spotify"></li>
+            <li>Home</li>
+            <li>About</li>
+        </ul>
+    </nav>
+    
+
+    <div class="container">
+         
+        <div class="songList">
+            <h1>Best of Mine</h1>
+            <div class="songItemContainer">
+                <div class="songItem">
+                    <img src="apt.jpg" alt="1">
+                    <span class="songName">APT</span>
+                    <span class="songlistplay"><span class="timestamp">02:53 <i id="0" class="far songItemPlay fa-play-circle"></i> </span></span>
+                </div>
+
+            </BR>
+                <div class="songItem">
+                    <img src="dandelion.jpg" alt="1">
+                    <span class="songName">Dandelions</span>
+                    <span class="songlistplay"><span class="timestamp">03:56 <i id="1" class="far songItemPlay fa-play-circle"></i> </span></span>
+                </div>
+            </BR>
+                <div class="songItem">
+                    <img src="afsos.jpg" alt="1">
+                    <span class="songName">Afsos</span>
+                    <span class="songlistplay"><span class="timestamp">03:12 <i id="2" class="far songItemPlay fa-play-circle"></i> </span></span>
+                </div>
+            </BR>
+                <div class="songItem">
+                    <img src="kabhi kabhi.png" alt="1">
+                    <span class="songName">Kabhi Kabhi</span>
+                    <span class="songlistplay"><span class="timestamp">03:36 <i id="3" class="far songItemPlay fa-play-circle"></i> </span></span>
+                </div>
+            </BR>
+                <div class="songItem">
+                    <img src="finding her.png" alt="1">
+                    <span class="songName">Finding Her</span>
+                    <span class="songlistplay"><span class="timestamp">03:33 <i id="4" class="far songItemPlay fa-play-circle"></i> </span></span>
+                </div>
+            </BR>
+                <div class="songItem">
+                    <img src="o mahi.jpg" alt="1">
+                    <span class="songName">O mahi</span>
+                    <span class="songlistplay"><span class="timestamp">04:06 <i id="5" class="far songItemPlay fa-play-circle"></i> </span></span>
+                </div>
+            </BR>
+                <div class="songItem">
+                    <img src="co2.jpg" alt="1">
+                    <span class="songName">Co2</span>
+                    <span class="songlistplay"><span class="timestamp">02:44 <i id="6" class="far songItemPlay fa-play-circle"></i> </span></span>
+                </div>
+            </BR>
+                <div class="songItem">
+                    <img src="wishes.jpg" alt="1">
+                    <span class="songName">Wishes</span>
+                    <span class="songlistplay"><span class="timestamp">03:39<i id="7" class="far songItemPlay fa-play-circle"></i> </span></span>
+                </div>
+            </BR>
+                <div class="songItem">
+                    <img src="alag.jpg" alt="1">
+                    <span class="songName">ALAG AASMAAN</span>
+                    <span class="songlistplay"><span class="timestamp">03:46 <i id="8" class="far songItemPlay fa-play-circle"></i> </span></span>
+                </div>
+            </BR>
+                <div class="songItem">
+                    <img src="apocalypse.jpg" alt="1">
+                    <span class="songName">Apocalypse</span>
+                    <span class="songlistplay"><span class="timestamp">04:51 <i id="9" class="far songItemPlay fa-play-circle"></i> </span></span>
+                </div>
+            </div>
+        </div>
+        <div class="songBanner"></div>
+    </div>
+
+    <div class="bottom">
+        <div id="currentSongName" class="current-song-name">Select a song to play</div>
+        <input type="range" name="range" id="myProgressBar" min="0" value="0" max="100">
+        <div class="icons">
+            <!-- fontawesome icons -->
+            <i class="fas fa-3x fa-step-backward" id="previous"></i>
+            <i class="far fa-3x fa-play-circle" id="masterplay"></i>
+            <i class="fas fa-3x fa-step-forward" id="next"></i> 
+            <div class="volume-control">
+                <i class="fas fa-volume-up" id="volumeIcon"></i>
+                <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="1">
+            </div>
+            
+        </div>
+         
+    </div>
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/7131bb1b82.js" crossorigin="anonymous"></script>
+</body>
+</html>

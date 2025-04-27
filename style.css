@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+body {
+    background-color: antiquewhite;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 80px;
+    background-color: black;
+    color: white;
+}
+
+nav ul li {
+    padding: 0 12px;
+}
+
+.brand img {
+    width: 180px;
+    margin-top: 20px;
+}
+
+.container {
+    min-height: 72vh;
+    background-color: black;
+    color: white;
+    font-family: 'Varela Round', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 23px auto;
+    width: 70%;
+    border-radius: 12px;
+    padding: 34px;
+
+    background-image: url('ph.jpg');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: contain;
+}
+
+.bottom {
+    position: sticky;
+    bottom: 0;
+    height: 200px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.icons {
+    margin-top: 14px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.icons i {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.icons i:active {
+    transform: scale(0.9);
+}
+
+#myProgressBar {
+    width: 80vw;
+    cursor: pointer;
+}
+
+.songItemContainer {
+    margin-top: 74px;
+}
+
+.songItem {
+    height: 50px;
+    display: flex;
+    background-color: white;
+    color: black;
+    margin: 12px 0;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 34px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    padding-right: 20px;
+    outline: none;
+    cursor: pointer;
+}
+
+/* 🔍 Zoom-out on hover */
+.songItem:hover {
+    transform: scale(0.95);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+/* 🌟 Highlight on focus/hover/active (CSS-only interactivity) */
+/* .songItem:focus-within,
+.songItem:focus, */
+.songItem:hover:active {
+    background: linear-gradient(135deg, #ffd700, #ff8c00);
+    color: white;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+    transform: scale(1.05);
+}
+
+/* 🔁 Loop-style spinner (modern + minimal) */
+.songlistplay::after {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border: 2px solid #fff;
+    border-top-color: transparent;
+    border-radius: 50%;
+    margin-left: 10px;
+    animation: spin 1s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Show loop on hover */
+.songItem:hover .songlistplay::after {
+    opacity: 1;
+}
+
+/* Spinner animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.songItem img {
+    width: 43px;
+    margin: 0 23px;
+    border-radius: 34px;
+}
+
+.timestamp {
+    margin: 0 23px;
+}
+
+.timestamp i {
+    cursor: pointer;
+}
+
+.songInfo {
+    position: absolute;
+    left: 10vw;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.songInfo img {
+    opacity: 0;
+    transition: opacity 0.4s ease-in;
+}
+
+@media only screen and (max-width: 1100px) {
+    body {
+        background-color: red;
+    }
+}
+
+.current-song-name {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 10px;
+    text-decoration: underline;
+    animation: fadeSlide 0.5s ease-in-out;
+}
+
+@keyframes fadeSlide {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.volume-control {
+    display: flex;
+    border-right: 10px;
+    gap: 10px;
+    margin-top: 8px;
+    color: white;
+}
+
+.volume-control i {
+    cursor: pointer;
+    font-size: 18px;
+    transition: transform 0.2s;
+}
+
+.volume-control i:hover {
+    transform: scale(1.2);
+    color: #1DB954;
+}
+
+#volumeSlider {
+    width: 120px;
+    accent-color: #1DB954;
+    cursor: pointer;
+}
